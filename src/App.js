@@ -51,9 +51,9 @@ import HomeComponent from "./components/home.component";
 //         </div>)
 // }
 
-const getIsLoggedIn = () => {
-  return sessionStorage.token && sessionStorage.token != null;
-};
+// const getIsLoggedIn = () => {
+//   return sessionStorage.token && sessionStorage.token != null;
+// };
 
 // const requireLogin = (to, from, next) => {
 //   if (to.meta.auth) {
