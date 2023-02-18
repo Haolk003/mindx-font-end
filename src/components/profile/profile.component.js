@@ -1,12 +1,12 @@
 import { connect } from "react-redux";
-import moment from 'moment';
+import moment from "moment";
 import { Redirect } from "react-router-dom";
 const { Component } = require("react");
 
 class ProfileComponent extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   render() {
     const { isLoggedIn } = this.props;
@@ -61,7 +61,7 @@ class OrderRow extends Component {
         <td>{row.price}</td>
         <td>{row.quantity}</td>
         <td>{row.size}</td>
-        <td>{moment(row.date).format('DD/MM/YYYY')}</td>
+        <td>{moment(row.date).format("DD/MM/YYYY")}</td>
       </tr>
     ));
   }

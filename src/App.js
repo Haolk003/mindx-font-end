@@ -6,39 +6,39 @@ import { Route, BrowserRouter as Router, Link } from "react-router-dom";
 import LoginComponent from "./components/login/login.component";
 // import NoLink from "./components/twowaybinding/nolink.component";
 // import WithLink from "./components/twowaybinding/withlink.component";
-import TicketListComponent from "./components/tickets/ticket-list.component";
+// import TicketListComponent from "./components/tickets/ticket-list.component";
 
 import { Component } from "react";
 import OrderComponent from "./components/orders/orders-list.component";
 import { connect } from "react-redux";
 import ProfileComponent from "./components/profile/profile.component";
 import HomeComponent from "./components/home.component";
-const users = [
-  {
-    email: "gowtham@outlook.com",
-    firstname: "gowtham",
-    lastname: "ss",
-    password: "outlook010",
-  },
-  {
-    email: "ss@ss.com",
-    firstname: "ss",
-    lastname: "ss",
-    password: "ss",
-  },
-  {
-    email: "gow@gow.com",
-    firstname: "gow",
-    lastname: "gow",
-    password: "gow",
-  },
-  {
-    email: "thanhhh@wow.com",
-    firstname: "Ho Huu",
-    lastname: "Thanh",
-    password: "wow",
-  },
-];
+// const users = [
+//   {
+//     email: "gowtham@outlook.com",
+//     firstname: "gowtham",
+//     lastname: "ss",
+//     password: "outlook010",
+//   },
+//   {
+//     email: "ss@ss.com",
+//     firstname: "ss",
+//     lastname: "ss",
+//     password: "ss",
+//   },
+//   {
+//     email: "gow@gow.com",
+//     firstname: "gow",
+//     lastname: "gow",
+//     password: "gow",
+//   },
+//   {
+//     email: "thanhhh@wow.com",
+//     firstname: "Ho Huu",
+//     lastname: "Thanh",
+//     password: "wow",
+//   },
+// ];
 
 // const App = () => <Table data={users} />;
 // const App = () => <ArtistListComponent data={users} />;
@@ -55,16 +55,16 @@ const getIsLoggedIn = () => {
   return sessionStorage.token && sessionStorage.token != null;
 };
 
-const requireLogin = (to, from, next) => {
-  if (to.meta.auth) {
-    if (getIsLoggedIn()) {
-      next();
-    }
-    next.redirect("/login");
-  } else {
-    next();
-  }
-};
+// const requireLogin = (to, from, next) => {
+//   if (to.meta.auth) {
+//     if (getIsLoggedIn()) {
+//       next();
+//     }
+//     next.redirect("/login");
+//   } else {
+//     next();
+//   }
+// };
 class App extends Component {
   constructor(props) {
     super(props);
