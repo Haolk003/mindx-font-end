@@ -15,5 +15,5 @@ class AuthenticateService extends BaseService {
     return res.data;
   }
 }
-
-export default new AuthenticateService();
+const join = new AuthenticateService();
+export default join;
