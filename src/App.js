@@ -1,11 +1,11 @@
 import { Route, BrowserRouter as Router, Link } from "react-router-dom";
-import Table from "./Table";
-import ArtistListComponent from "./components/artists/artists-list.component";
-import ArtistDetailComponent from "./components/artists/artist-detail.component";
-import ContactListComponent from "./components/contacts/contact-list.component";
+// import Table from "./Table";
+// import ArtistListComponent from "./components/artists/artists-list.component";
+// import ArtistDetailComponent from "./components/artists/artist-detail.component";
+// import ContactListComponent from "./components/contacts/contact-list.component";
 import LoginComponent from "./components/login/login.component";
-import NoLink from "./components/twowaybinding/nolink.component";
-import WithLink from "./components/twowaybinding/withlink.component";
+// import NoLink from "./components/twowaybinding/nolink.component";
+// import WithLink from "./components/twowaybinding/withlink.component";
 import TicketListComponent from "./components/tickets/ticket-list.component";
 
 import { Component } from "react";
@@ -108,18 +108,10 @@ class App extends Component {
               </li>
             </ul>
           </nav>
-          <Route
-              exact
-              path="/"
-              component={HomeComponent}
-            ></Route>
-            <Route
-              exact
-              path="/orders"
-              component={OrderComponent}
-            ></Route>
-            <Route exact path="/login" component={LoginComponent} />
-            <Route exact path="/profile" component={ProfileComponent}></Route>
+          <Route exact path="/" component={HomeComponent}></Route>
+          <Route exact path="/orders" component={OrderComponent}></Route>
+          <Route exact path="/login" component={LoginComponent} />
+          <Route exact path="/profile" component={ProfileComponent}></Route>
         </Router>
       </>
     );

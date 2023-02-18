@@ -4,16 +4,15 @@ class AuthenticateService extends BaseService {
   constructor() {
     super({ endpoint: "users" });
   }
-  login(user) {
+  async login(user) {
     let http = axios.create({
       baseURL: `${this.api}`,
     });
-    return http.post(`/${this.endpoint}/login`, user).then((res) => {
-      if (res.data.token) {
-        sessionStorage.setItem("token", res.data.token);
-      }
-      return res.data;
-    });
+    const res = await http.post(`/${this.endpoint}/login`, user);
+    if (res.data.token) {
+      sessionStorage.setItem("token", res.data.token);
+    }
+    return res.data;
   }
 }
 
